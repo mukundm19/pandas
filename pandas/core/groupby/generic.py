@@ -93,7 +93,7 @@ class NDFrameGroupBy(GroupBy):
     _block_agg_axis = 0
 
     def _cython_agg_blocks(self, how, alt=None, numeric_only=True,
-                           min_count=-1):
+                           min_count=-1, skipna=True):
         # TODO: the actual managing of mgr_locs is a PITA
         # here, it should happen via BlockManager.combine
 
